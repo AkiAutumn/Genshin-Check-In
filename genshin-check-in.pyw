@@ -66,15 +66,9 @@ def fetch_data():
                     icon_path="checkin.ico",
                     threaded=False,
                 )
-        else: # Something went wrong
-            toast.show_toast(
-                "Genshin Check-In",
-                "Received invalid response from HoYoLAB API",
-                duration=5,
-                icon_path="checkin.ico",
-                threaded=False,
-            )
+
     except requests.exceptions.RequestException as error:
         print("Error occurred:", error)
+
 
 fetch_data()
